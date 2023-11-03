@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +20,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav-bar {
+  flex-flow: row nowrap;
+  background: dark;
+  text-align: center;
+  color: #00c7ce90;
+}
+
+.nav-bar-link {
+  color: #86ce00;
+  padding: 0px 10px;
 }
