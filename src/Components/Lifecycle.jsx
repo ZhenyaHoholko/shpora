@@ -10,10 +10,6 @@ function Lifecycle() {
   };
   return (
     <div>
-      <button onClick={minus}>-1</button>
-      <a>Счетчик{count}</a>
-      <button onClick={plus}>+1</button>
-
       <h1>Методы жизненного цикла</h1>
       <p>Основные методы жизненного цикла:</p>
       <ol>
@@ -84,11 +80,6 @@ function Lifecycle() {
           </p>
         </li>
       </ol>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
     </div>
   );
 }
