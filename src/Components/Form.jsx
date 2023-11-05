@@ -2,15 +2,15 @@ import React from "react";
 
 function Form() {
   return (
-    <div>
+    <div className="content">
       <h1>Работа с формами</h1>
       <p>
         В React мы можем использовать все стандартные элементы форм, которые
         есть в html, однако здесь эти элементы приобретают дополнительные
         возможности. Рассмотрим, как работать с формами в React.
       </p>
-      <pre>
-        <code className="code">{`            class UserForm extends React.Component {
+      <pre className="code">
+        <code>{`            class UserForm extends React.Component {
                 constructor(props) {
                   super(props);
                   this.state = {name: ""};
@@ -50,15 +50,15 @@ function Form() {
         Чтобы контролировать введенные значения, в конструкторе устанавливается
         объект state:
       </p>
-      <pre>
-        <code className="code">{`           this.state = {name: ""};`}</code>
+      <pre className="code">
+        <code>{`           this.state = {name: ""};`}</code>
       </pre>
       <p>
         При определении поля ввода каждое поле связывается с определенным
         значением в state:
       </p>
-      <pre>
-        <code className="code">{`            <input type="text" value={this.state.name} onChange={this.onChange} />`}</code>
+      <pre className="code">
+        <code>{`            <input type="text" value={this.state.name} onChange={this.onChange} />`}</code>
       </pre>
       <p>
         Так, источником значения для поля ввода имени является объект
@@ -74,8 +74,8 @@ function Form() {
       <p>
         Суть каждого обработчика заключается в изменении значений в this.state:
       </p>
-      <pre>
-        <code className="code">{`            onChange(e) {
+      <pre className="code">
+        <code>{`            onChange(e) {
                 var val = e.target.value;
                 this.setState({name: val});
             }`}</code>

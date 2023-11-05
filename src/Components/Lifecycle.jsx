@@ -9,7 +9,7 @@ function Lifecycle() {
     setCount(count + 1);
   };
   return (
-    <div>
+    <div className="content">
       <h1>Методы жизненного цикла</h1>
       <p>Основные методы жизненного цикла:</p>
       <ol>
@@ -24,14 +24,14 @@ function Lifecycle() {
             <li>Привязка методов обработчика событий к экземпляру.</li>
           </ul>
         </li>
-        <pre>
-          <code className="code">{`this.setState({username:'Mark'});`}</code>
+        <pre className="code">
+          <code>{`this.setState({username:'Mark'});`}</code>
         </pre>
         <li>
           render ()
           <p>Рендеринг компонента. Отдает JSX.</p>
-          <pre>
-            <code className="code">{`render () {
+          <pre className="code">
+            <code>{`render () {
     return (
         <div>
           'Hello'
@@ -47,8 +47,8 @@ function Lifecycle() {
             (вставки в дерево). Используется для отправки запросов на серверк
             удаленным ресурсам, setTimeout, обращение к DOM-элементам.
           </p>
-          <pre>
-            <code className="code">{`componentDidMount()`}</code>
+          <pre className="code">
+            <code>{`componentDidMount()`}</code>
           </pre>
         </li>
         <li>
@@ -57,8 +57,8 @@ function Lifecycle() {
             Вызывается после обновления компонента. В качестве парапметров
             передаются старые значения объектов: props и state.
           </p>
-          <pre>
-            <code className="code">{`componentDidUpdate(prevProps, prevState) {
+          <pre className="code">
+            <code>{`componentDidUpdate(prevProps, prevState) {
   if (this.props.userID !== prevProps.userID) {
       this.fetchData(this.props.userID);
       }
@@ -71,9 +71,11 @@ function Lifecycle() {
             Вызывается перед удалением компонента из DOM. Используется для
             закрытия асинхронных запросов, таймеров.
           </p>
-          <code className="code">{`componentWillUnmount() { 
+          <pre className="code">
+            <code>{`componentWillUnmount() { 
   alert("The component named Header is about to be unmounted.");
             }`}</code>
+          </pre>
           <p>
             Для использования методов жизненного цикла в функциональных
             компонентах предназначек хук useEffect.

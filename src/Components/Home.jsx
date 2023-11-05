@@ -2,9 +2,9 @@ import MainWay from "../img/MainWay.jpeg";
 
 function Home() {
   return (
-    <div>
+    <div className="content">
       <h1>Основная теория по библиотеке React</h1>
-      <img src={MainWay} width={700} height={500} alt="" />
+      <img className="images" src={MainWay} alt="" />
     </div>
   );
 }

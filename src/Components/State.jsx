@@ -29,8 +29,8 @@ function State() {
         контролироваться им. Изменения состояния компонента необходимо делать
         внутри компонента – инициализация и обновление состояния компонента.
       </p>
-      <pre>
-        <code className="code">
+      <pre className="code">
+        <code>
           {`            class App extends React.Component {
                 constructor(props) {
                     super(props)
@@ -50,12 +50,12 @@ function State() {
       </p>
       <p>Так нельзя менять состояние: this.state.username='Mark'</p>
       <p>1 способ изменить state:</p>
-      <pre>
-        <code className="code">{`this.setState({username:'Mark'});`}</code>
+      <pre className="code">
+        <code>{`this.setState({username:'Mark'});`}</code>
       </pre>
       <p>2 способ изменить state:</p>
-      <pre>
-        <code className="code">{`this.setState(() => ({ username: 'Mark' }))`}</code>
+      <pre className="code">
+        <code>{`this.setState(() => ({ username: 'Mark' }))`}</code>
       </pre>
       <p>
         В функциональных компонентах state создается с помощью хука useState()
@@ -63,8 +63,8 @@ function State() {
       <p>
         Чтобы воспользоваться им, необходимо импортировать useState из 'react':
       </p>
-      <pre>
-        <code className="code">{`import {useState} from 'react';`}</code>
+      <pre className="code">
+        <code>{`import {useState} from 'react';`}</code>
       </pre>
       <p>
         Хук useState() принимается в качестве параметра первоначальное значение
@@ -74,10 +74,10 @@ function State() {
       <p>
         При объявлении state часто используют деструктурирующее присваивание:
       </p>
-      <pre>
-        <code className="code">{`const [name, setName] = useState('Mark');`}</code>
+      <pre className="code">
+        <code>{`const [name, setName] = useState('Mark');`}</code>
       </pre>
-      <p>
+      <p className="button">
         <button id="decrement" onClick={decrement}>
           -1
         </button>{" "}
@@ -92,8 +92,8 @@ function State() {
         нажатии на кнопку.
       </p>
       <p>Код имеет следующий вид:</p>
-      <pre>
-        <code className="code">
+      <pre className="code">
+        <code>
           {`function Counter() {
                 const [count, setCount] = useState(0);
                 return (

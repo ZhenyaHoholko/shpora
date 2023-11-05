@@ -2,7 +2,7 @@ import React from "react";
 
 function Fragment() {
   return (
-    <div>
+    <div className="content">
       <h1>Фрагмент</h1>
       <p>
         С помощью фрагментов можно сгруппировать список дочерних элементов без
@@ -12,12 +12,12 @@ function Fragment() {
         Используем React.Fragment или выполняем импорт, чтобы использовать
         Fragment:
       </p>
-      <pre>
-        <code className="code">{`            import { Fragment } from 'react';`}</code>
+      <pre className="code">
+        <code>{`            import { Fragment } from 'react';`}</code>
       </pre>
       <p>Заменяем теги div на Fragment:</p>
-      <pre>
-        <code className="code">{`            class ChildComponent extends React.Component {
+      <pre className="code">
+        <code>{`            class ChildComponent extends React.Component {
                 render() {
                     return (
                         <Fragment>
@@ -28,8 +28,8 @@ function Fragment() {
             }`}</code>
       </pre>
       <p>Существует сокращенная запись (импортировать не нужно):</p>
-      <pre>
-        <code className="code">{`             class ChildComponent extends React.Component {
+      <pre className="code">
+        <code>{`             class ChildComponent extends React.Component {
                 render() {
                     return (
                         <>

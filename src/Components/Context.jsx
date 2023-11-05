@@ -2,12 +2,12 @@ import React from "react";
 
 function Context() {
   return (
-    <div>
+    <div className="content">
       <h1>Контекст</h1>
       <p>Создать контекст:</p>
-      <pre>
-        <code className="code">
-          {`const MyContext = React.createContext(defaultValue);`}
+      <pre className="code">
+        <code>
+          {`               const MyContext = React.createContext(defaultValue);`}
         </code>
       </pre>
       <ul>
@@ -24,9 +24,9 @@ function Context() {
         <li>
           Компонент Provider. Благодаря ему все дочерние компоненты могут
           получать значения, которые мы ему передаем.
-          <pre>
-            <code className="code">
-              {`<MyContext.Provider value={value}> </MyContext.Provider>`}
+          <pre className="code">
+            <code>
+              {`            <MyContext.Provider value={value}> </MyContext.Provider>`}
             </code>
           </pre>
           <p>
@@ -52,11 +52,11 @@ function Context() {
             аргумент value будет равен значению defaultValue, которое было
             передано в createContext().
           </p>
-          <pre>
-            <code className="code">
-              {`<MyContext.Consumer>
-{value => /* отрендерить что-то, используя значение контекста */}
-</MyContext.Consumer>`}
+          <pre className="code">
+            <code>
+              {`            <MyContext.Consumer>
+            {value => /* отрендерить что-то, используя значение контекста */}
+          </MyContext.Consumer>`}
             </code>
           </pre>
           <p>
@@ -68,8 +68,8 @@ function Context() {
             Текущее значение контекста определяется пропом value ближайшего
             MyContext.Provider над вызывающим компонентом в дереве.
           </p>
-          <pre>
-            <code className="code">{`const value = useContext(MyContext);`}</code>
+          <pre className="code">
+            <code className="code">{`            const value = useContext(MyContext);`}</code>
           </pre>
           <p>
             Компонент, вызывающий useContext, всегда будет перерендериваться при

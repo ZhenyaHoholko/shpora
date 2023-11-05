@@ -2,10 +2,10 @@ import React from "react";
 
 function ReactMemo() {
   return (
-    <div>
+    <div className="content">
       <h1>React.memo</h1>
-      <pre>
-        <code className="code">{`            const MyComponent = React.memo(function MyComponent(props) {
+      <pre className="code">
+        <code>{`            const MyComponent = React.memo(function MyComponent(props) {
                 /* рендер с использованием пропсов */
             });`}</code>
       </pre>
@@ -32,8 +32,8 @@ function ReactMemo() {
         props. Если вы хотите контролировать сравнение, вы можете передать свою
         функцию сравнения в качестве второго аргумента.
       </p>
-      <pre>
-        <code className="code">{`            function MyComponent(props) {
+      <pre className="code">
+        <code>{`            function MyComponent(props) {
                 /* рендер с использованием пропсов */
               }
               function areEqual(prevProps, nextProps) {
@@ -49,8 +49,8 @@ function ReactMemo() {
       <p>
         Аналогом в классовых компонентах выступает метод shouldComponentUpdate()
       </p>
-      <pre>
-        <code className="code">{`            shouldComponentUpdate(nextProps, nextState) {
+      <pre className="code">
+        <code>{`            shouldComponentUpdate(nextProps, nextState) {
                 return !shallowEqual (nextProps, this.props) ||
                        !shallowEqual (nextState, this.state);
             }`}</code>

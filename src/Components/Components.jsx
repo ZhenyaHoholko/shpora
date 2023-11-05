@@ -11,11 +11,12 @@ function Components() {
       <p>Компоненты бывают функциональные и классовые.</p>
       <p>Проще всего объявить React-компонент как функцию:</p>
       <p>
-        <pre>
-          <code className="code">
-            {`function Welcome() {
-  return <h1>Привет, мир!</h1>;
-}`}
+        <pre className="code">
+          <code>
+            {`            function Welcome() {
+                return <h1>Привет, мир! </h1>;
+            }
+            `}
           </code>
         </pre>
       </p>
@@ -27,13 +28,13 @@ function Components() {
       </p>
       <p>Ещё компоненты можно определять как классы ES6:</p>
       <p>
-        <pre>
-          <code className="code">
-            {`class Welcome extends React.Component {
-  render() {
-    return <h1>Привет, мир!</h1>;
-  }
-}`}
+        <pre className="code">
+          <code>
+            {`            class Welcome extends React.Component {
+                render() {
+                    return <h1>Привет, мир!</h1>;
+                }
+            }`}
           </code>
         </pre>
       </p>

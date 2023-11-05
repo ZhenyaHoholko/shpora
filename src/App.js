@@ -23,27 +23,28 @@ import HeaderComponent from "./Components/HeaderComponent";
 
 function App() {
   return (
-    <div>
+    <div className="forFonts">
       <HeaderComponent></HeaderComponent>
       <Routes>
-        <Route path="/AsynchronousRequests" element={<Asynchronous />}></Route>
-        <Route path="/Components" element={<Components />}></Route>
-        <Route path="/Context" element={<Context />}></Route>
-        <Route path="/Events" element={<Events />}></Route>
-        <Route path="/Form" element={<Form />}></Route>
-        <Route path="/Fragment" element={<Fragment />}></Route>
+        <Route path="/asynchronousrequests" element={<Asynchronous />}></Route>
+        <Route path="/components" element={<Components />}></Route>
+        <Route path="/context" element={<Context />}></Route>
+        <Route path="/events" element={<Events />}></Route>
+        <Route path="/form" element={<Form />}></Route>
+        <Route path="/fragment" element={<Fragment />}></Route>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/Key" element={<Key />}></Route>
-        <Route path="/Lifecycle" element={<Lifecycle />}></Route>
-        <Route path="/Props" element={<Props />}></Route>
-        <Route path="/ReactMemo" element={<ReactMemo />}></Route>
-        <Route path="/Refs" element={<Refs />}></Route>
-        <Route path="/Router" element={<Router />}></Route>
-        <Route path="/State" element={<State />}></Route>
-        <Route path="/UseEffect" element={<UseEffect />}></Route>
-        <Route path="/Virtual_DOM" element={<Virtual />}></Route>
+        <Route path="/key" element={<Key />}></Route>
+        <Route path="/lifecycle" element={<Lifecycle />}></Route>
+        <Route path="/props" element={<Props />}></Route>
+        <Route path="/reactMemo" element={<ReactMemo />}></Route>
+        <Route path="/refs" element={<Refs />}></Route>
+        <Route path="/router" element={<Router />}></Route>
+        <Route path="/state" element={<State />}></Route>
+        <Route path="/useEffect" element={<UseEffect />}></Route>
+        <Route path="/virtual" element={<Virtual />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
+      <footer className="footer">App ©2023 Created by Zhenya Hoholko</footer>
     </div>
   );
 }

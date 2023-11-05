@@ -6,7 +6,7 @@ function Events() {
     setIsToggleOn(!isToggleOn);
   }
   return (
-    <div>
+    <div className="content">
       <h1>Обработка событий</h1>
       <p>
         События в React именуются в стиле camelCase вместо нижнего регистра.
@@ -46,8 +46,8 @@ function Events() {
         </li>
         <li>Переход: onTransitionEnd</li>
       </ul>
-      <pre>
-        <code className="code">{`            <button onClick={activateLasers}>
+      <pre className="code">
+        <code>{`            <button onClick={activateLasers}>
             Активировать лазеры
             </button>`}</code>
       </pre>
@@ -55,8 +55,8 @@ function Events() {
         В React нельзя предотвратить обработчик события по умолчанию, вернув
         false. Нужно явно вызвать preventDefault.
       </p>
-      <pre>
-        <code className="code">{`            function Form() {
+      <pre className="code">
+        <code>{`            function Form() {
                 function handleSubmit(e) {
                   e.preventDefault();
                   console.log('Отправлена форма.');
@@ -74,8 +74,8 @@ function Events() {
         компонент Toggle рендерит кнопку, которая позволяет пользователю
         переключать состояния между «Включено» и «Выключено»:
       </p>
-      <pre>
-        <code className="code">{`            class Toggle extends React.Component {
+      <pre className="code">
+        <code>{`            class Toggle extends React.Component {
                 constructor(props) {
                   super(props);
                   this.state = {isToggleOn: true};
@@ -104,10 +104,10 @@ function Events() {
                     document.getElementById('root')
                     );`}</code>
       </pre>
-      <p>
+      <p className="button">
         Результат кода:
-        <pre>
-          <code className="code">
+        <pre className="button">
+          <code>
             <button className={"toggle__btn"} onClick={() => handleClick()}>
               {isToggleOn ? "Включено" : "Выключено"}
             </button>
@@ -115,8 +115,8 @@ function Events() {
         </pre>
       </p>
       <p>Этот же код, но переписанный на функциональную компоненту:</p>
-      <pre>
-        <code className="code">{`            function Toggle() {
+      <pre className="code">
+        <code>{`            function Toggle() {
                 let [isToggleOn, setIsToggleOn] = useState(true);
                 function handleClick() {
                   setIsToggleOn(!isToggleOn)
@@ -133,8 +133,8 @@ function Events() {
         события. Например, если id — это идентификатор строки, можно
         использовать следующий вариант:
       </p>
-      <pre>
-        <code className="code">{` <button onClick={(e) => deleteRow(id, e)}>Удалить строку</button>`}</code>
+      <pre className="code">
+        <code>{` <button onClick={(e) => deleteRow(id, e)}>Удалить строку</button>`}</code>
       </pre>
     </div>
   );

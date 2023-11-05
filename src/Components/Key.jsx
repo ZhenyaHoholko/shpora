@@ -2,15 +2,15 @@ import React from "react";
 
 function Key() {
   return (
-    <div>
+    <div className="content">
       <h1>Ключи</h1>
       <p>
         Ключи помогают React определять, какие элементы были изменены, добавлены
         или удалены. Их необходимо указывать, чтобы React мог сопоставлять
         элементы массива с течением времени:
       </p>
-      <pre>
-        <code className="code">{`            const numbers = [1, 2, 3, 4, 5];
+      <pre className="code">
+        <code>{`            const numbers = [1, 2, 3, 4, 5];
             const listItems = numbers.map((number) =>
               <li key={number.toString()}>
                 {number}
@@ -22,8 +22,8 @@ function Key() {
         отличать элемент списка от его соседей. Чаще всего вы будете
         использовать ID из ваших данных как ключи:
       </p>
-      <pre>
-        <code className="code">{`            const todoItems = todos.map((todo) =>
+      <pre className="code">
+        <code>{`            const todoItems = todos.map((todo) =>
             <li key={todo.id}>
               {todo.text}
             </li>

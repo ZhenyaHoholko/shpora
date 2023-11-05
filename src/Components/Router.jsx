@@ -2,7 +2,7 @@ import React from "react";
 
 function Router() {
   return (
-    <div>
+    <div className="content">
       <h1>Router</h1>
       <p>
         В React имеется своя система маршрутизации, которая позволяет
@@ -12,12 +12,12 @@ function Router() {
         собираемся работать в браузере, то нам также надо использовать модуль
         react-router-dom.
       </p>
-      <pre>
-        <code className="code">{`           npm i react-router-dom`}</code>
+      <pre className="code">
+        <code>{`           npm i react-router-dom`}</code>
       </pre>
       <p>После установки нужно импортировать BrowserRouter, Routes, Route:</p>
-      <pre>
-        <code className="code">{`            import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';`}</code>
+      <pre className="code">
+        <code>{`            import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';`}</code>
       </pre>
       <p>
         Вместо рендеринга компонента App мы рендерим компонент Router. Компонент
@@ -25,8 +25,8 @@ function Router() {
         элементам, вложенным в него. Его следует использовать один раз и
         поместить рядом с корнем дерева компонентов:
       </p>
-      <pre>
-        <code className="code">{`            render(
+      <pre className="code">
+        <code>{`            render(
                 <Router>
                 <App />
                 </Router>,
@@ -38,8 +38,8 @@ function Router() {
         называется Routes. Внутри Routes мы будем использовать компонент Route
         для каждой страницы, которую хотим отобразить.
       </p>
-      <pre>
-        <code className="code">{`            import React from "react";
+      <pre className="code">
+        <code>{`            import React from "react";
             import { Routes, Route } from "react-router-dom";
             import { Home, About, Events, Products, Contact } from "./pages";
             function App() {

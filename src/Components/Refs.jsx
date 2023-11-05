@@ -2,7 +2,7 @@ import React from "react";
 
 function Refs() {
   return (
-    <div>
+    <div className="content">
       <h1>Refs</h1>
       <p>
         Refs (далее просто «ссылки») предоставляет способ доступа к DOM-узлам
@@ -23,8 +23,8 @@ function Refs() {
         свойству экземпляра, когда компонент создаётся таким образом, чтобы на
         них можно было ссылаться по всему компоненту.
       </p>
-      <pre>
-        <code className="code">{`            class MyComponent extends React.Component {
+      <pre className="code">
+        <code>{`            class MyComponent extends React.Component {
                 constructor(props) {
                   super(props);
                   this.myRef = React.createRef();
@@ -35,8 +35,8 @@ function Refs() {
             }`}</code>
       </pre>
       <p>В функциональных компонентах используется хук useRef:</p>
-      <pre>
-        <code className="code">{`            import { useRef } from 'react';
+      <pre className="code">
+        <code>{`            import { useRef } from 'react';
 
 function MyComponent () {
     const refContainer = useRef(initialValue);
